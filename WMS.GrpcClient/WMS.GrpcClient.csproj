@@ -6,6 +6,8 @@
 
   <ItemGroup>
     <None Remove="nomenclature.proto" />
+    <None Remove="Protos\employee.proto" />
+    <None Remove="Protos\inbound.proto" />
   </ItemGroup>
 
   <ItemGroup>
@@ -20,6 +22,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Protobuf Include="Protos\employee.proto" GrpcServices="Client" />
+    <Protobuf Include="Protos\inbound.proto" GrpcServices="Client" />
     <Protobuf Include="Protos\nomenclature.proto" GrpcServices="Client" />
   </ItemGroup>
 
