@@ -3,16 +3,9 @@
     /// <summary>
     /// Представляет результат запроса.
     /// </summary>
-    public class RequestResult<T>
+    public sealed class RequestResult<T>
     {
-        /// <summary>
-        /// Создает экземпляр класса <see cref="RequestResult"/>.
-        /// </summary>
-        public RequestResult(T response, bool isSuccess)
-        {
-            Response = response;
-            IsSuccess = isSuccess;
-        }
+        #region Public Properties
 
         /// <summary>
         /// Статус ответа.
@@ -23,5 +16,20 @@
         /// Ответ.
         /// </summary>
         public T Response { get; }
+
+        #endregion Public Properties
+
+        #region Public Constructors
+
+        /// <summary>
+        /// Создает экземпляр класса <see cref="RequestResult"/>.
+        /// </summary>
+        public RequestResult(T response, bool isSuccess)
+        {
+            Response = response;
+            IsSuccess = isSuccess;
+        }
+
+        #endregion Public Constructors
     }
 }
